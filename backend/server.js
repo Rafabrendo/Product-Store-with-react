@@ -9,6 +9,7 @@ const app = express();
 
 app.get("/products", (req,res) => {
     // res.send("Server is ready");
+    
 });
 
 // console.log(process.env.MONGO_URI);
