@@ -1,4 +1,5 @@
 import Product from '../models/product.model.js'; //Lembre-se sempre do js no final
+
 import mongoose from 'mongoose';
 
 export const getProducts = async(req, res) =>{
@@ -98,6 +99,13 @@ export const createProduct = async (req, res) => {
 export const deleteProduct = async (req, res) => {
     const {id} = req.params;
     console.log("id:", id);
+
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({
+            success: false,
+            message: "invalid Product Id"
+        })
+    }
     
     try {
         await Product.findByIdAndDelete(id);
