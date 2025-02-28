@@ -1,8 +1,16 @@
-import { Container, Flex, Text, Link, HStack, Button} from "@chakra-ui/react";
+import { Container, Flex, Text, HStack, Button, useColorMode} from "@chakra-ui/react";
 import { LuCircleFadingPlus } from "react-icons/lu";
+import { Link } from "react-router-dom";
+import { BsCartPlus } from "react-icons/bs";
+import {IoMoon} from "react-icons/io5";
+import {LuSun} from "react-icons/lu"
 
 const Navbar = () =>{
-    return <Container maxW={"1140px"} px={4}>
+    const {colorMode, toggleColorMode } = useColorMode();
+
+    return <Container maxW={"1140px"} px={4} 
+    // bg={useColorModeValue("gray.100", "green.100")}
+    >
         <Flex
             h={16}
             alignItems={"center"}
@@ -20,14 +28,23 @@ const Navbar = () =>{
                 bgGradient={"linear(to-r, cyan.400, blue.500)"}
                 bgClip={"text"}
                 >
-                    <Link to={"/"}>Product Store x</Link>
+                    <Link to={"/"}>Product Store  
+                        <Button background={"transparent"}>
+                            <BsCartPlus  size={40}/>
+                        </Button> 
+                    </Link>
             </Text>
             <HStack spacing={2} alignItems={"center"}>
                 <Link to={"/create"}>
                     <Button>
                         <LuCircleFadingPlus fontSize={20}/>
+                    
                     </Button>
                 </Link>
+                <Button onClick={toggleColorMode}>
+                    {colorMode === "light" ? <IoMoon size='20'/> : <LuSun  size='20'/>}
+
+                </Button>
             </HStack>
         </Flex>
     </Container>;
