@@ -5,7 +5,10 @@ import HomePage from "./pages/HomePage"
 import Navbar from "./components/Navbar"
 import './App.css'
 
+
 function App(){
+  
+
   return (
     <Box minH={"100vh"} bg={useColorModeValue("gray.100", "#202d73")}>
       <Navbar />

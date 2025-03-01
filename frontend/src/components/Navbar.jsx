@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { BsCartPlus } from "react-icons/bs";
 import {IoMoon} from "react-icons/io5";
 import {LuSun} from "react-icons/lu"
+import { useProductStore } from "../store/product";
 
 const Navbar = () =>{
     const {colorMode, toggleColorMode } = useColorMode();
+    const { product }  = useProductStore();
 
     return <Container maxW={"1140px"} px={4} 
     // bg={useColorModeValue("gray.100", "green.100")}
