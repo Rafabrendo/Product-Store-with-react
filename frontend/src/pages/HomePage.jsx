@@ -14,19 +14,20 @@ const HomePage = () => {
     }, [fetchProducts]);
     console.log("Products", products)
     return (
-        <Container maxW={"container.x1"} py={12}>
+        <Container maxW={"80%"} py={12}>
             <VStack spacing={8}>
             <Box display={"flex"} gap={1}>
                 <Text
-                    fontSize={"30px"}
+                    fontSize={"47px"}
                     fontWeight={"bold"}
                     bgGradient={"linear(to-r, cyan.400, blue.500)"}
                     bgClip={"text"}
                     textAlign={"center"}
                 
                 >
-                    Current Products
-                </Text><RiSpaceShipLine size={40} color={"#B1BCD2"}/>
+                    Current Products 🚀
+                </Text>
+                {/* <RiSpaceShipLine size={40} color={"#B1BCD2"}/> */}
             </Box>
             <SimpleGrid
                 columns={{
