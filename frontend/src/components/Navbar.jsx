@@ -35,7 +35,7 @@ const Navbar = () =>{
                 >
                     <Link to={"/"}>Product Store  
                         <Button background={"transparent"}>
-                            <BsCartPlus  size={40}/>
+                            <BsCartPlus  size={40} color="#B1BCD2"/>
                         </Button> 
                     </Link>
             </Text>
