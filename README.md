@@ -2,7 +2,7 @@
 
  
 <ul> 
-    <li><b>Tech Stacks:</b> Tech Stack: React.js, Node.js, Express.js, MongoDB, Chakra UI
+    <li><b>Tech Stacks:</b> React.js, Node.js, Express.js, MongoDB, Chakra UI
     <li> 🔥 Build an API
     <li> 📱 Responsive UI With React.js and ChakraUI
     <li> 🐞 Error Handling
